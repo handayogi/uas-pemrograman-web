@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie and Storage Example</title>
+</head>
+<body>
+
+    <h1>Cookie and Local Storage Example</h1>
+
+    <!-- Form untuk cookie -->
+    <h2>Set Cookie</h2>
+    <label for="cookieName">Cookie Name:</label>
+    <input type="text" id="cookieName" placeholder="Enter cookie name">
+    <label for="cookieValue">Cookie Value:</label>
+    <input type="text" id="cookieValue" placeholder="Enter cookie value">
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">Get Cookie</button>
+    <button onclick="deleteCookie()">Delete Cookie</button>
+    <p id="cookieOutput"></p>
+
+    <!-- Form untuk local storage -->
+    <h2>Local Storage</h2>
+    <label for="storageData">Enter data to save:</label>
+    <input type="text" id="storageData" placeholder="Enter some data">
+    <button onclick="saveToLocalStorage()">Save Data</button>
+    <button onclick="showSavedData()">Show Saved Data</button>
+    <div id="storageOutput"></div>
+
+    <script>
+        // Fungsi untuk menetapkan cookie
+        function setCookie() {
+            const name = document.getElementById('cookieName').value;
+            const value = document.getElementById('cookieValue').value;
+            const expires = new Date();
+            expires.setMinutes(expires.getMinutes() + 5); // Cookie akan kedaluwarsa dalam 5 menit
+            document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+            alert("Cookie set successfully!");
+        }
+
+        // Fungsi untuk mendapatkan cookie
+        function getCookie() {
+            const name = document.getElementById('cookieName').value;
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookieArr = decodedCookie.split(';');
+            let cookieValue = "";
+            cookieArr.forEach(function(cookie) {
+                if (cookie.indexOf(name + "=") === 0) {
+                    cookieValue = cookie.substring(name.length + 1);
+                }
+            });
+            document.getElementById('cookieOutput').textContent = cookieValue ? `Cookie Value: ${cookieValue}` : "Cookie not found.";
+        }
+
+        // Fungsi untuk menghapus cookie
+        function deleteCookie() {
+            const name = document.getElementById('cookieName').value;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+            alert("Cookie deleted!");
+        }
+
+        // Fungsi untuk menyimpan data ke local storage
+        function saveToLocalStorage() {
+            const data = document.getElementById('storageData').value;
+            localStorage.setItem('savedData', data);
+            alert("Data saved to Local Storage!");
+        }
+
+        // Fungsi untuk menampilkan data dari local storage
+        function showSavedData() {
+            const savedData = localStorage.getItem('savedData');
+            document.getElementById('storageOutput').textContent = savedData ? `Saved Data: ${savedData}` : "No data found in Local Storage.";
+        }
+    </script>
+
+</body>
+</html>

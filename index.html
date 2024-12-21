@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS Pemrograman Web</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Form Sign Up --> 
+    <div class="form">
+      <div class="title">Welcome</div>
+      <div class="subtitle">Let's create your account!</div>
+
+      <form id="user-form">
+        <div class="input-container ic1">
+            <input placeholder="" type="text" class="input" id="username">
+            <div class="cut"></div>
+            <label class="iLabel" for="username">Username</label>
+        </div>
+    
+        <div class="input-container ic2">
+            <input placeholder="" type="email" class="input" id="email">
+            <div class="cut cut-short"></div>
+            <label class="iLabel" for="email">Email</label>
+        </div>
+        <div class="input-container ic2">
+            <input placeholder="" type="password" class="input" id="password">
+            <div class="cut"></div>
+            <label class="iLabel" for="password">Password</label>
+        </div>
+        <div class="input-container ic2">
+            <input placeholder="" type="password" class="input" id="confirmPassword">
+            <div class="cut cut-long"></div>
+            <label class="iLabel" for="confirmPassword">Confirm Password</label>
+        </div>
+        <button class="submit" type="submit" id="btn">Sign Up</button>
+        <span class="link">Add some product <a href="assets/layout/product.html">here</a></span>
+        <span class="link">Check session <a href="assets/layout/index.php">here</a></span>
+        <span class="link">Check cookie and storage <a href="assets/layout/cookie.html">here</a></span>
+      </form>
+    </div>
+
+    <!-- Data Server (Dummy) -->
+    <div class="table-container">
+        <h2>User List</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>

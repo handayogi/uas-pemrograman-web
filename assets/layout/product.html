@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Product</title>
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="title">Add Product</div>
+        <div class="subtitle">Insert form product below.</div>
+
+        <form class="product-form" id="product-form">
+            <div class="input-container">
+                <input placeholder="" type="text" id="code" class="input" name="code" required>
+                <label for="code">Product Code</label>
+            </div>
+            <div class="input-container">
+                <input placeholder="" type="text" id="name" class="input" name="name" required>
+                <label for="name">Product Name</label>
+            </div>
+            <div class="input-container">
+                <input placeholder="" type="text" id="category" class="input" name="category" required>
+                <label for="category">Product Category</label>
+            </div>
+            <div class="input-container">
+                <input placeholder="" type="text" id="price" class="input" name="price" required>
+                <label for="price">Product Price</label>
+            </div>
+
+            <button type="submit" class="submit">Add Product</button>
+        </form>
+
+        <div class="response-message"></div>
+
+        <div id="product-display"></div>
+    </div>
+
+    <script src="../js/product.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: #ffffff;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #999;
+}
+
+.submit {
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit:hover {
+    background: #0056b3;
+}
+
+/* Response Message */
+.response-message {
+    font-size: 14px;
+    color: green;
+    margin: 10px 0;
+}
+
+/* Product Display */
+#product-display {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.product-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+.product-actions button.edit {
+    background: #ffc107;
+}
+
+.product-actions button.edit:hover {
+    background: #e0a800;
+}
+
+.product-actions button.delete {
+    background: #dc3545;
+}
+
+.product-actions button.delete:hover {
+    background: #bd2130;
+}
